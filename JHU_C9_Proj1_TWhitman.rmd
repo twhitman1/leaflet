@@ -1,0 +1,27 @@
+---
+title: "JHU-Leaflet Exercise"
+author: "Tom Whitman"
+date: "April 5, 2019"
+output: html_document
+---
+
+## Introduction
+
+Leaflet is a Javascript library of interactive maps, enabled for use in R via "leaflet" package.  This assignment is a brief and simple sample/exploration of this pacakage.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+library(dplyr)
+```
+
+## Using Leaflet to create the map
+
+Per assignment, I will now create a web page using R Markdown, which features a map created with Leaflet, for hosting via my GitHub page.  This will mark the pitcher's mound in Citizen's Bank Park.
+
+```{r map}
+map1 <- leaflet() %>% addTiles() %>% addMarkers(lng=-75.166564, lat=39.905738, popup = "Phightin Phils!")
+map1
+```
+
+#### _*05-Feb-2019*_
